@@ -49,7 +49,7 @@
 
 <template>
     <q-page class="contenedor">
-        <h1 class="bg-orange q-pa-sm title">Hacer Tareas</h1>
+        <h1 class="bg-black text-white q-pa-sm title">Hacer Tareas</h1>
         <q-input style="width: 400px;" v-model="tarea" @keyup.enter="agregarTarea"></q-input>
         <br>
         <q-btn @click="agregarTarea">Agregar</q-btn>
@@ -97,5 +97,6 @@
  .title{
     border: 2px solid black;
     border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  }
 </style>
