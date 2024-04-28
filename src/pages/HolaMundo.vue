@@ -49,7 +49,7 @@
 
 <template>
     <q-page class="contenedor">
-        <h1 :class="{'bg-primary text-white q-pa-lg': estilo}">Hacer Tareas</h1>
+        <h1 class="bg-orange q-pa-sm title">Hacer Tareas</h1>
         <q-input style="width: 400px;" v-model="tarea" @keyup.enter="agregarTarea"></q-input>
         <br>
         <q-btn @click="agregarTarea">Agregar</q-btn>
@@ -59,7 +59,7 @@
             <li
             v-for="(value, index) in filtrarTareas"
             :key="index"
-            :class="{'bg-green': esPar(index)}">
+            :class="{'bg-black text-white q-pa-xs': esPar(index)}">
             <IndexPage 
             :nombre="value.nombre"
             :tareaHecha="value.tareaHecha"
@@ -71,7 +71,7 @@
             </li>
            </div>
         </ul>
-        <p v-else>No hay tareas Pendientes!</p>
+        <p v-else class="q-mt-lg">No hay tareas Pendientes!</p>
 
         <h5>Tareas Terminadas: {{ tareasTerminadas }}</h5>
         <h5>Ocultar Tareas Terminadas <q-toggle v-model="ocultarTareas" /></h5>
@@ -93,5 +93,9 @@
  }
  li{
     list-style-type: none;
+ }
+ .title{
+    border: 2px solid black;
+    border-radius: 10px;
  }
 </style>
